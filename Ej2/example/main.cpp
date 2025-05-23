@@ -1,4 +1,4 @@
-#include "headers/manager.hpp"
+#include "../headers/manager.hpp"
 
 void clearScreen();
 void clearScreen(){
