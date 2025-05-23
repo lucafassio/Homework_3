@@ -9,6 +9,7 @@ class SaveFlightData{
         Posicion posicion;
         Presion presion;
         
+        SaveFlightData();
         SaveFlightData(const Posicion& p, const Presion& q);
 
         void reset();

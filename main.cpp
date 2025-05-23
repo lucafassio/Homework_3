@@ -33,7 +33,7 @@ int main(){
             }
             switch (choice){
                 case 0: return 0;
-                case 1: system("cd Ej1 && make"); break;
+                case 1: system("cd Ej1 && make serial"); system("cd Ej1 && make deserial"); break;
                 case 2: system("cd Ej2 && make"); break;
                 case 3: system("cd Ej3 && make"); break;
             }

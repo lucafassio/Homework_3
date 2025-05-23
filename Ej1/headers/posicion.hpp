@@ -9,6 +9,7 @@ class Posicion : public MedicionBase{
         float longitud;
         float altitud;
 
+        Posicion();
         Posicion(float lat, float lon, float alt, float t);
         Posicion(const Posicion& p);
 

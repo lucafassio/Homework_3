@@ -1,5 +1,9 @@
 #include "../headers/saveFlightData.hpp"
 
+SaveFlightData::SaveFlightData(): 
+    posicion(), presion() 
+{}
+
 SaveFlightData::SaveFlightData(const Posicion& p, const Presion& q): 
     posicion(p), presion(q) 
 {}

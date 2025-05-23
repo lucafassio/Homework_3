@@ -1,5 +1,9 @@
 #include "../headers/medicionBase.hpp"
 
+MedicionBase::MedicionBase(): 
+    tiempoMedicion(nullptr) 
+{}
+
 MedicionBase::MedicionBase(float t): 
     tiempoMedicion(make_unique<float>(t)) 
 {}

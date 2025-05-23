@@ -8,6 +8,7 @@ class Presion : public MedicionBase{
         float presionEstatica;
         float presionDinamica;
 
+        Presion();
         Presion(float p, float q, float t);
         Presion(const Presion& p);
 

@@ -8,6 +8,7 @@ class MedicionBase : public IMediciones{
         unique_ptr<float> tiempoMedicion;
     
     public:
+        MedicionBase();
         MedicionBase(float t);
 
         float getTiempo() const;

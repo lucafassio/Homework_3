@@ -16,9 +16,8 @@ class Constructor{
         static ValueCont<pair<string, string>> data;
 
     public:
-        static void addLine(string tag, string value) {data.addElement(make_pair(tag, value));}
-        static void printJSON() {data.toString();}
+        static void addLine(string tag, string value);
+        static void printJSON();
 };
-ValueCont<pair<string, string>> Constructor::data;
 
 #endif

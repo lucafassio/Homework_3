@@ -1,5 +1,9 @@
 #include "../headers/presion.hpp"
 
+Presion::Presion(): 
+    MedicionBase(), presionEstatica(0), presionDinamica(0) 
+{}
+
 Presion::Presion(float p, float q, float t): 
     MedicionBase(t), presionEstatica(p), presionDinamica(q) 
 {}
