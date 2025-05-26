@@ -1,5 +1,7 @@
 #include <iostream>
 #include <limits>
+#include <thread>
+#include <chrono>
 using namespace std;
 
 //esto esta sacado de internet, es para limpiar la terminal nomas.
@@ -12,23 +14,34 @@ void clearScreen(){
     #endif
 }
 
+void printOptions();
+void printOptions(){
+    cout << "===================== Homework 3 =====================" << endl;
+    cout << "Choose an exercise to run:" << endl;
+    cout << "1. Flight Data" << endl;
+    cout << "2. Figures" << endl;
+    cout << "3. JSON Constructor" << endl;
+    cout << "0. Exit" << endl;
+    cout << "> ";
+}
+
 int main(){
     try{
         while(true){
             clearScreen();
-            cout << "===================== Homework 3 =====================" << endl;
-            cout << "Choose an exercise to run:" << endl;
-            cout << "1. Flight Data" << endl;
-            cout << "2. Figures" << endl;
-            cout << "3. JSON Constructor" << endl;
-            cout << "0. Exit" << endl;
-            cout << "> ";
+            printOptions();
             int choice;
             cin >> choice;
             while (!cin.good() || choice < 0 || choice > 3) {
+                cout << "Invalid input. Select a valid option." << endl;
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Invalid input. Select a valid option.\n> ";
+                
+                //agrego un delay de 2 segundos.
+                this_thread::sleep_for(chrono::seconds(1));
+
+                clearScreen();
+                printOptions();
                 cin >> choice;
             }
             switch (choice){
@@ -43,6 +56,6 @@ int main(){
         }
     }
     catch (const exception& e){
-        cout << "Something bad happened :( - " << e.what() << endl;
+        cout << "Something bad happened :( - " << e.what() << endl;        
     }
 }
