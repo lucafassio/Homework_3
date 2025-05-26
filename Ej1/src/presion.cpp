@@ -12,12 +12,6 @@ Presion::Presion(const Presion& p):
     MedicionBase(p.getTiempo()), presionEstatica(p.presionEstatica), presionDinamica(p.presionDinamica) 
 {}
 
-void Presion::reset(){
-    presionEstatica = 0;
-    presionDinamica = 0;
-    MedicionBase::~MedicionBase();
-}
-
 void Presion::imprimir() const{
     cout << "Static preasure: " << presionEstatica << endl;
     cout << "Dynamic preasure: " << presionDinamica << endl;

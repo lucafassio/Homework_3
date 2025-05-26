@@ -8,11 +8,6 @@ SaveFlightData::SaveFlightData(const Posicion& p, const Presion& q):
     posicion(p), presion(q) 
 {}
 
-void SaveFlightData::reset(){
-    posicion.reset();
-    presion.reset();
-}
-
 void SaveFlightData::imprimir() const{
     if (posicion.getTiempo() >= 0){
         cout << "- Position: " << endl;

@@ -12,7 +12,6 @@ class MedicionBase : public IMediciones{
         MedicionBase(float t);
 
         float getTiempo() const;
-        virtual void reset() = 0;
         virtual void imprimir() const = 0;
 
         virtual ~MedicionBase() = default;

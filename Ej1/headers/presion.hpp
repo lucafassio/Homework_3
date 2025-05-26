@@ -12,7 +12,6 @@ class Presion : public MedicionBase{
         Presion(float p, float q, float t);
         Presion(const Presion& p);
 
-        void reset() override;
         void imprimir() const override;
         void serializar(ostream& out) const override;
         void deserializar(istream& in) override;

@@ -13,7 +13,6 @@ class Posicion : public MedicionBase{
         Posicion(float lat, float lon, float alt, float t);
         Posicion(const Posicion& p);
 
-        void reset() override;
         void imprimir() const override;
         void serializar(ostream& out) const override;
         void deserializar(istream& in) override;

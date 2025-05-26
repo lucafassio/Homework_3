@@ -12,13 +12,6 @@ Posicion::Posicion(const Posicion& p):
     MedicionBase(p.getTiempo()), latitud(p.latitud), longitud(p.longitud), altitud(p.altitud) 
 {}
 
-void Posicion::reset(){
-    latitud = 0;
-    longitud = 0;
-    altitud = 0;
-    MedicionBase::~MedicionBase();
-}
-
 void Posicion::imprimir() const{
     cout << "Latitude: " << latitud << endl;
     cout << "Longitude: " << longitud << endl;
